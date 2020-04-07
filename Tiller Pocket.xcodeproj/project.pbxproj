@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E10EDD0243CB92A00717480 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 8E10EDCF243CB92A00717480 /* QGrid */; };
 		8E684E7E24339B6B007D5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E7D24339B6B007D5D98 /* AppDelegate.swift */; };
 		8E684E8024339B6B007D5D98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E7F24339B6B007D5D98 /* SceneDelegate.swift */; };
 		8E684E8224339B6B007D5D98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E8124339B6B007D5D98 /* HomeView.swift */; };
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E10EDD0243CB92A00717480 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,9 @@
 			dependencies = (
 			);
 			name = "Tiller Pocket";
+			packageProductDependencies = (
+				8E10EDCF243CB92A00717480 /* QGrid */,
+			);
 			productName = Layout;
 			productReference = 8E684E7A24339B6B007D5D98 /* Tille Pocket.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 8E684E7124339B6B007D5D98;
+			packageReferences = (
+				8E10EDCE243CB92A00717480 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 8E684E7B24339B6B007D5D98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E10EDCE243CB92A00717480 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E10EDCF243CB92A00717480 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E10EDCE243CB92A00717480 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E684E7224339B6B007D5D98 /* Project object */;
 }
