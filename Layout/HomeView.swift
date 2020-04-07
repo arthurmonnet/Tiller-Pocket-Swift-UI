@@ -34,7 +34,7 @@ struct HomeView: View {
                     {
                         Image(systemName: "plus.circle.fill")                .font(.system(size: 24, weight: .medium))
                         .frame(width: 42, height: 44)
-                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                        .foregroundColor(Color("Primary"))
                     }
                     .sheet(isPresented: $newOrder) {
                         ModalView()
@@ -45,9 +45,9 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
-                    OrderType(name: "Ouvertes", color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
-                    OrderType(name: "À Encaisser", color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
-                    OrderType(name: "Réservées", color: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1))
+                    OrderFilters(name: "Ouvertes", color: "Primary")
+                    OrderFilters(name: "À Encaisser", color: "Secondary")
+                    OrderFilters(name: "Réservées", color: "Tertiary")
 
                 }
                 .padding(.horizontal)
@@ -61,7 +61,7 @@ struct HomeView: View {
                     Spacer()
                     Text("4")
                         .font(.subheadline).fontWeight(.semibold)
-                    .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                    .foregroundColor(Color("Primary"))
                         
                 }
                 .padding(.horizontal)
@@ -84,9 +84,9 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
-struct OrderType: View {
+struct OrderFilters: View {
     var name: String
-    var color: UIColor
+    var color: String
     var body: some View {
         Text(name)
             .font(.system(size: 15, weight: .semibold))
@@ -141,11 +141,11 @@ struct Order:Identifiable {
     var tableID: Int
     var amount: CGFloat
     var people: Int
-    var color: UIColor
+    var color: String
 }
 
 let orderData = [
-    Order(tableID: 1, amount: 12, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
-    Order(tableID: 2, amount: 10, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
-    Order(tableID: 3, amount: 15, people: 4, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
+    Order(tableID: 1, amount: 12, people: 2, color: "Primary"),
+    Order(tableID: 2, amount: 10, people: 2, color: "Primary"),
+    Order(tableID: 3, amount: 15, people: 4, color: "Primary"),
 ]
