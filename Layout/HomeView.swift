@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var newOrder = false
 
     var body: some View {
         
@@ -28,10 +29,17 @@ struct HomeView: View {
                     .foregroundColor(.black)
                 
                 Spacer()
-                
-                    Image(systemName: "plus.circle.fill")                .font(.system(size: 24, weight: .medium))
-                    .frame(width: 42, height: 44)
-                    .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                    
+                Button(action: {self.newOrder.toggle()})
+                    {
+                        Image(systemName: "plus.circle.fill")                .font(.system(size: 24, weight: .medium))
+                        .frame(width: 42, height: 44)
+                        .foregroundColor(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                    }
+                    .sheet(isPresented: $newOrder) {
+                        ModalView()
+                    }
+                    
    
                 
             }
