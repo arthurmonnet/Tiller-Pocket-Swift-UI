@@ -18,22 +18,22 @@ struct HomeView: View {
             HStack(alignment: .center) {
                 Image(systemName: "line.horizontal.3")
                 .font(.system(size: 24, weight: .medium))
-                    .frame(width: 42, height: 44)
-                    .foregroundColor(.black)
+                    .frame(width: 44, height: 44)
+                    .foregroundColor(Color("Main"))
                 
                 Spacer()
                     
                 Text("Commandes")
                     .font(.headline)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
-                
+                    .foregroundColor(Color("Main"))
+
                 Spacer()
                     
                 Button(action: {self.newOrder.toggle()})
                     {
                         Image(systemName: "plus.circle.fill")                .font(.system(size: 24, weight: .medium))
-                        .frame(width: 42, height: 44)
+                        .frame(width: 44, height: 44)
                         .foregroundColor(Color("Primary"))
                     }
                     .sheet(isPresented: $newOrder) {
@@ -57,7 +57,7 @@ struct HomeView: View {
                 HStack {
                     Text("Ouvertes")
                         .font(.subheadline).fontWeight(.semibold)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("Main"))
                     Spacer()
                     Text("4")
                         .font(.subheadline).fontWeight(.semibold)
@@ -89,7 +89,7 @@ struct OrderFilters: View {
     var color: String
     var body: some View {
         Text(name)
-            .font(.system(size: 15, weight: .semibold))
+            .font(.subheadline).fontWeight(.semibold)
             .multilineTextAlignment(.center)
             .padding(5.0)
             .padding(.horizontal, 12)
@@ -107,18 +107,18 @@ struct OrderItem: View {
             HStack() {
                 
                 Text("\(order.tableID)")
-                    .font(.system(size: 20, weight: .semibold))
+                    .font(.headline)
                     .frame(width: 36, height: 36)
                     .background(Color(order.color))
                     .cornerRadius(4)
                     .foregroundColor(Color.white)
-                
+
                 VStack(alignment: .leading) {
                     Text("\(Int(order.amount)) €")
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundColor(.black)
+                        .font(.subheadline).fontWeight(.semibold)
+                        .foregroundColor(Color("Main"))
                     Text("\(order.people) Couverts")
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(.caption).fontWeight(.semibold)
                         .foregroundColor(Color(order.color))
                 }
                 Spacer()
