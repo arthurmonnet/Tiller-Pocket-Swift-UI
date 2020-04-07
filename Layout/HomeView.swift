@@ -39,8 +39,6 @@ struct HomeView: View {
                     .sheet(isPresented: $newOrder) {
                         ModalView()
                     }
-                    
-   
                 
             }
             .padding(.horizontal, 8.0)
@@ -67,12 +65,9 @@ struct HomeView: View {
                         
                 }
                 .padding(.horizontal)
-                
-                OrderItem(tableID: 12, amount: 2, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
-                OrderItem(tableID: 12, amount: 2, people: 2, color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1))
-                OrderItem(tableID: 12, amount: 2, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
-
-                
+                ForEach(orderData) { item in
+                    OrderItem(order: item)
+                }
             }
             .padding(.top)
 
@@ -105,40 +100,52 @@ struct OrderType: View {
 }
 
 struct OrderItem: View {
-    var tableID: Int
-    var amount: CGFloat
-    var people: Int
-    var color: UIColor
+    var order: Order
+    
     var body: some View {
         HStack {
             HStack() {
                 
-                Text("\(tableID)")
+                Text("\(order.tableID)")
                     .font(.system(size: 20, weight: .semibold))
                     .frame(width: 36, height: 36)
-                    .background(Color(color))
+                    .background(Color(order.color))
                     .cornerRadius(4)
                     .foregroundColor(Color.white)
                 
                 VStack(alignment: .leading) {
-                    Text("\(Int(amount)) €")
+                    Text("\(Int(order.amount)) €")
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(.black)
-                    Text("\(people) Couverts")
+                    Text("\(order.people) Couverts")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(Color(color))
+                        .foregroundColor(Color(order.color))
                 }
                 Spacer()
                 
                 Image(systemName: "arrow.right.circle.fill")
                     .font(.system(size: 20, weight: .medium))
-                    .foregroundColor(Color(color))
+                    .foregroundColor(Color(order.color))
             }
                 
             .padding()
-            .background(Color(color).opacity(0.2))
+            .background(Color(order.color).opacity(0.2))
             .cornerRadius(8)
         }
         .padding(.horizontal)
     }
 }
+
+struct Order:Identifiable {
+    var id = UUID()
+    var tableID: Int
+    var amount: CGFloat
+    var people: Int
+    var color: UIColor
+}
+
+let orderData = [
+    Order(tableID: 1, amount: 12, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
+    Order(tableID: 2, amount: 10, people: 2, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
+    Order(tableID: 3, amount: 15, people: 4, color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)),
+]
