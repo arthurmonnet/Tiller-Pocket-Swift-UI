@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		8E684E7E24339B6B007D5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E7D24339B6B007D5D98 /* AppDelegate.swift */; };
 		8E684E8024339B6B007D5D98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E7F24339B6B007D5D98 /* SceneDelegate.swift */; };
-		8E684E8224339B6B007D5D98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E8124339B6B007D5D98 /* ContentView.swift */; };
+		8E684E8224339B6B007D5D98 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E684E8124339B6B007D5D98 /* HomeView.swift */; };
 		8E684E8424339B6D007D5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E684E8324339B6D007D5D98 /* Assets.xcassets */; };
 		8E684E8724339B6D007D5D98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E684E8624339B6D007D5D98 /* Preview Assets.xcassets */; };
 		8E684E8A24339B6D007D5D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E684E8824339B6D007D5D98 /* LaunchScreen.storyboard */; };
+		8EE68028243C82F600E7AEE5 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE68027243C82F600E7AEE5 /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E684E7A24339B6B007D5D98 /* Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E684E7A24339B6B007D5D98 /* Tille Pocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tille Pocket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E684E7D24339B6B007D5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E684E7F24339B6B007D5D98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E684E8124339B6B007D5D98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8E684E8124339B6B007D5D98 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8E684E8324339B6D007D5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E684E8624339B6D007D5D98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E684E8924339B6D007D5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E684E8B24339B6D007D5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EE68027243C82F600E7AEE5 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		8EE68029243C9B4B00E7AEE5 /* Tille Pocket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tille Pocket.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 		8E684E7124339B6B007D5D98 = {
 			isa = PBXGroup;
 			children = (
+				8EE68029243C9B4B00E7AEE5 /* Tille Pocket.entitlements */,
 				8E684E7C24339B6B007D5D98 /* Layout */,
 				8E684E7B24339B6B007D5D98 /* Products */,
 			);
@@ -48,7 +52,7 @@
 		8E684E7B24339B6B007D5D98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E684E7A24339B6B007D5D98 /* Layout.app */,
+				8E684E7A24339B6B007D5D98 /* Tille Pocket.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +62,8 @@
 			children = (
 				8E684E7D24339B6B007D5D98 /* AppDelegate.swift */,
 				8E684E7F24339B6B007D5D98 /* SceneDelegate.swift */,
-				8E684E8124339B6B007D5D98 /* ContentView.swift */,
+				8E684E8124339B6B007D5D98 /* HomeView.swift */,
+				8EE68027243C82F600E7AEE5 /* ModalView.swift */,
 				8E684E8324339B6D007D5D98 /* Assets.xcassets */,
 				8E684E8824339B6D007D5D98 /* LaunchScreen.storyboard */,
 				8E684E8B24339B6D007D5D98 /* Info.plist */,
@@ -78,9 +83,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E684E7924339B6B007D5D98 /* Layout */ = {
+		8E684E7924339B6B007D5D98 /* Tiller Pocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E684E8E24339B6D007D5D98 /* Build configuration list for PBXNativeTarget "Layout" */;
+			buildConfigurationList = 8E684E8E24339B6D007D5D98 /* Build configuration list for PBXNativeTarget "Tiller Pocket" */;
 			buildPhases = (
 				8E684E7624339B6B007D5D98 /* Sources */,
 				8E684E7724339B6B007D5D98 /* Frameworks */,
@@ -90,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = Layout;
+			name = "Tiller Pocket";
 			productName = Layout;
-			productReference = 8E684E7A24339B6B007D5D98 /* Layout.app */;
+			productReference = 8E684E7A24339B6B007D5D98 /* Tille Pocket.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E684E7524339B6B007D5D98 /* Build configuration list for PBXProject "Layout" */;
+			buildConfigurationList = 8E684E7524339B6B007D5D98 /* Build configuration list for PBXProject "Tiller Pocket" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E684E7924339B6B007D5D98 /* Layout */,
+				8E684E7924339B6B007D5D98 /* Tiller Pocket */,
 			);
 		};
 /* End PBXProject section */
@@ -148,7 +153,8 @@
 			files = (
 				8E684E7E24339B6B007D5D98 /* AppDelegate.swift in Sources */,
 				8E684E8024339B6B007D5D98 /* SceneDelegate.swift in Sources */,
-				8E684E8224339B6B007D5D98 /* ContentView.swift in Sources */,
+				8EE68028243C82F600E7AEE5 /* ModalView.swift in Sources */,
+				8E684E8224339B6B007D5D98 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tille Pocket.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Layout/Preview Content\"";
 				DEVELOPMENT_TEAM = 569AA428LQ;
@@ -294,7 +301,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurmonnet.Layout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tille Pocket";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tille Pocket.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Layout/Preview Content\"";
 				DEVELOPMENT_TEAM = 569AA428LQ;
@@ -314,7 +323,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurmonnet.Layout;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tille Pocket";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E684E7524339B6B007D5D98 /* Build configuration list for PBXProject "Layout" */ = {
+		8E684E7524339B6B007D5D98 /* Build configuration list for PBXProject "Tiller Pocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E684E8C24339B6D007D5D98 /* Debug */,
@@ -332,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E684E8E24339B6D007D5D98 /* Build configuration list for PBXNativeTarget "Layout" */ = {
+		8E684E8E24339B6D007D5D98 /* Build configuration list for PBXNativeTarget "Tiller Pocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E684E8F24339B6D007D5D98 /* Debug */,
